@@ -1,19 +1,22 @@
 {
-    "KPackageStructure": "Plasma/Applet",
-    "KPlugin": {
-        "Authors": [
-            {
-                "Name": "YohanesOktanio",
-                "Email": "yohanesoktayt72@gmail.com"
-            }
-        ],
-        "Category": "Network",
-        "Id": "org.kde.plasma.pingstatus",
-        "License": "GPL",
-        "Name": "Ping Status",
-        "Version": "1.0",
-        "Description": "Displays the ping status of 8.8.8.8"
-    },
-    "X-Plasma-API-Version": "6.0",
-    "X-Plasma-MainScript": "contents/ui/main.qml"
+  "KPlugin": {
+    "Id": "pingwidget",
+    "Name": "Ping Widget",
+    "Description": "Widget sederhana untuk ping 8.8.8.8 dengan latensi",
+    "Version": "1.0",
+    "License": "GPL",
+    "Author": "Yohanes",
+    "ServiceTypes": [
+      "Plasma/Applet"
+    ]
+  },
+  "X-Plasma-API": "declarativeappletscript",
+  "X-Plasma-MainScript": "ui/main.qml",
+  "X-Plasma-Provides": [
+    "Applets"
+  ],
+  "X-Plasma-FormFactors": [
+    "desktop",
+    "panel"
+  ]
 }
