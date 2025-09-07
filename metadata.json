@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "YohanesOktanio",
+                "Email": "yohanesoktayt72@gmail.com"
+            }
+        ],
+        "Category": "Network",
+        "Id": "org.kde.plasma.pingstatus",
+        "License": "GPL",
+        "Name": "Ping Status",
+        "Version": "1.0",
+        "Description": "Displays the ping status of 8.8.8.8"
+    },
+    "X-Plasma-API-Version": "6.0",
+    "X-Plasma-MainScript": "contents/ui/main.qml"
+}
