@@ -19,7 +19,7 @@
   },
   "X-Plasma-API": "declarativeappletscript",
   "X-Plasma-MainScript": "ui/main.qml",
-  "X-Plasma-ConfigUI": "ui/config.qml",
+  "X-Plasma-ConfigUI": "config/config.qml",
   "X-Plasma-Provides": [
     "Applets"
   ],

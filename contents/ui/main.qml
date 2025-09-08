@@ -36,7 +36,7 @@ Item {
 
     Timer {
         id: pingTimer
-        interval: 500
+        interval: plasmoid.configuration.interval || 500
         running: true
         repeat: true
         onTriggered: pingSource.connectSource("/bin/bash -c \"ping -c 1 " + hostname + "\"")
