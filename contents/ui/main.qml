@@ -3,6 +3,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+
 Item {
     id: root
     width: 200
@@ -51,26 +52,29 @@ Item {
             font.bold: true
             font.pointSize: 14
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            color: connectionState === "online"   ? "lightgreen"
-                 : connectionState === "offline" ? "red"
-                 : "yellow"
+            color: connectionState === "online" ? "lightgreen" : connectionState === "offline" ? "red" : "yellow"
         }
     }
 
     Plasmoid.compactRepresentation: Item {
-        anchors.fill: parent
-        Label {
-            id: compactStatus
+        Layout.minimumWidth: 60   
+        Layout.preferredWidth: 60
+        Layout.fillHeight: true
+
+        Rectangle {
             anchors.fill: parent
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            text: pingValue
-            font.bold: true
-            font.pointSize: 10
-            padding: 4
-            color: connectionState === "online"   ? "lightgreen"
-                 : connectionState === "offline" ? "red"
-                 : "yellow"
+            anchors.margins: 6
+            color: "transparent"
+            Label {
+                id: compactStatus
+                anchors.fill: parent
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                text: pingValue
+                font.bold: true
+                font.pointSize: 10
+                color: connectionState === "online" ? "lightgreen" : connectionState === "offline" ? "red" : "yellow"
+            }
         }
     }
 }
