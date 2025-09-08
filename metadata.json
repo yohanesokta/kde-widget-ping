@@ -5,13 +5,21 @@
     "Description": "Widget sederhana untuk ping 8.8.8.8 dengan latensi",
     "Version": "1.0",
     "License": "GPL",
-    "Author": "Yohanes",
+    "Icon": "network-transmit-receive",
+    "Authors": [
+      {
+        "name": "Yohanes Oktanio",
+        "Email": "yohanesoktayt72@gmail.com"
+      }
+    ],
     "ServiceTypes": [
       "Plasma/Applet"
-    ]
+    ],
+    "Website": "https://github.com/yohanesokta/kde-widget-ping"
   },
   "X-Plasma-API": "declarativeappletscript",
   "X-Plasma-MainScript": "ui/main.qml",
+  "X-Plasma-ConfigUI": "ui/config.qml",
   "X-Plasma-Provides": [
     "Applets"
   ],

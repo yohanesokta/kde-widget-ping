@@ -3,7 +3,6 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
-
 Item {
     id: root
     width: 200
@@ -33,12 +32,14 @@ Item {
         }
     }
 
+    property string hostname: plasmoid.configuration.hostname || "8.8.8.8"
+
     Timer {
         id: pingTimer
         interval: 500
         running: true
         repeat: true
-        onTriggered: pingSource.connectSource("/bin/bash -c \"ping -c 1 8.8.8.8\"")
+        onTriggered: pingSource.connectSource("/bin/bash -c \"ping -c 1 " + hostname + "\"")
     }
 
     Plasmoid.fullRepresentation: ColumnLayout {
